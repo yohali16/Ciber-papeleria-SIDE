@@ -674,12 +674,12 @@ const ING_COLS=[
    → https://console.firebase.google.com → Tu proyecto → ⚙️ → Configuración del proyecto
 ═══════════════════════════════════════════════════════════ */
 const FIREBASE_CONFIG = {
-  apiKey: "AIzaSyAxgoiaZYpYKJLPM9RXiIQpbh6kTHT6qIs",
-  authDomain: "ciber-papeleria-side.firebaseapp.com",
-  projectId: "ciber-papeleria-side",
-  storageBucket: "ciber-papeleria-side.firebasestorage.app",
-  messagingSenderId: "249618002523",
-  appId: "1:249618002523:web:f78312cd771c0fb088c57e"
+  apiKey:            "TU_API_KEY_AQUI",
+  authDomain:        "TU_PROYECTO.firebaseapp.com",
+  projectId:         "TU_PROYECTO_ID",
+  storageBucket:     "TU_PROYECTO.appspot.com",
+  messagingSenderId: "TU_SENDER_ID",
+  appId:             "TU_APP_ID"
 };
 
 // Shared document path in Firestore (todos los usuarios comparten estos datos)
@@ -743,6 +743,8 @@ function showPage(id,btn){
   if(pageEl) pageEl.classList.add('active');
   btn.classList.add('active');
   currentPage=id;
+  // Ocultar barra de meses cuando no es Ingresos (evita confusión con meses de Recargas)
+  document.getElementById('monthBar').style.display = id==='ingresos' ? '' : 'none';
 }
 
 /* ════ STORAGE CONSTANTS (local cache) ════ */
