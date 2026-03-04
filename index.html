@@ -671,7 +671,6 @@ const ING_COLS=[
 
 /* ════ FIREBASE CONFIG ════
    ⚠️  REEMPLAZA ESTOS VALORES con los de tu proyecto Firebase
-   → https://console.firebase.google.com → Tu proyecto → ⚙️ → Configuración del proyecto
 ═══════════════════════════════════════════════════════════ */
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyAxgoiaZYpYKJLPM9RXiIQpbh6kTHT6qIs",
@@ -1142,7 +1141,7 @@ function renderSummary(){
   for(let d=1;d<=days;d++){const day=m.days[d]||{};
     vSaldo+=n(day.ventaSaldo);vCiber+=n(day.ventaCiber);retiros+=n(day.retiros);}
   (m.gastos||[]).forEach(g=>gastos+=n(g.monto));
-  const totalIng=vSaldo+vCiber;const neto=totalIng-retiros-gastos;
+  const totalIng=vSaldo+vCiber;const neto=totalIng-gastos;
   const cards=[
     {l:'Venta Ciber',   v:vCiber,   i:'🖥️',cls:'c-lila'},
     {l:'Venta Saldo',   v:vSaldo,   i:'📱',cls:'c-cielo'},
